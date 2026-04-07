@@ -1,0 +1,43 @@
+@use '../util' as u;
+@use '../global/spacing' as s;
+
+.header {
+  margin-block-start: s.$margin-header;
+  margin-block-end: 2.5rem;
+  position: relative;
+
+  @include u.bp(desk) {
+    margin-block-start: 4rem;
+    margin-block-end: u.pxRem(152);
+  }
+
+  &__background {
+    position: absolute;
+    top: calc(var(--clamp-232-374) * -1);
+    z-index: 1;
+
+    @include u.bp(desk) {
+      top: -4rem;
+      right: 0;
+    }
+  }
+
+  &__home-link {
+    margin-inline: auto;
+    z-index: 2;
+
+    @include u.bp(desk) {
+      margin-inline: 0;
+    }
+  }
+
+  &__home-logo {
+    width: u.pxRem(82);
+    height: 2rem;
+
+    @include u.bp(lap) {
+      width: u.pxRem(103);
+      height: 2.5rem;
+    }
+  }
+}

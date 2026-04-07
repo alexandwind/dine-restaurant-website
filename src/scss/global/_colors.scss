@@ -1,0 +1,27 @@
+:root {
+  /*--- Design system colors ---*/
+  /*-- 1 Neutral --*/
+  --c-neutral-950: hsl(0, 0%, 0%);
+  --c-neutral-900: hsl(0, 0%, 7%);
+  --c-neutral-700: hsl(0, 0%, 27%);
+  --c-neutral-600: hsl(0, 0%, 30%);
+  --c-neutral-400: hsl(0, 0%, 56%);
+  --c-neutral-100: hsl(0, 0%, 93%);
+  --c-neutral-0: hsl(0, 0%, 100%);
+
+  /*-- 2 State --*/
+  --c-state-800: hsl(218, 21%, 18%);
+  --c-state-500: hsl(217, 14%, 42%);
+
+  /*-- 2 Other colors --*/
+  --c-red-500: hsl(0, 43%, 50%);
+  --c-brown-500: hsl(27, 22%, 51%);
+
+  /*-- Global styles colors --*/
+  --text-primary-lt: var(--c-neutral-0);
+  --text-primary-dk: var(--c-state-800);
+  --text-secondary-dk: var(--c-neutral-600);
+
+  --bg-main: var(--c-neutral-900);
+  --bg-main-lt: var(--c-neutral-100);
+}

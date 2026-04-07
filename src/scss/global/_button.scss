@@ -1,0 +1,22 @@
+@use '../util' as u;
+@use '../global/typography' as t;
+
+.button {
+  padding: 1.5rem 3.5rem;
+  color: var(--text-primary-lt);
+  border: 1px solid var(--c-neutral-0);
+  text-transform: uppercase;
+  width: fit-content;
+  @include t.text-preset-5;
+  transition: 250ms ease-in-out;
+  transition-property: color, background;
+
+  &:hover {
+    color: var(--text-primary-dk);
+    background: var(--bg-main-lt);
+  }
+
+  @include u.bp-max(lap) {
+    justify-self: center;
+  }
+}

@@ -1,0 +1,19 @@
+@use '../util' as u;
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr 1.5rem;
+
+  > * {
+    grid-column: 2;
+  }
+
+  > .fullbleed {
+    width: min(100%, u.pxRem(1440));
+    grid-column: 1 / -1;
+  }
+
+  @include u.bp(lap) {
+    grid-template-columns: 1fr min(100% - 5rem, u.pxRem(1190)) 1fr;
+  }
+}

@@ -1,0 +1,117 @@
+@use '../util' as u;
+
+@mixin text-preset-1 {
+  font-size: 5rem;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-weight: 300;
+}
+
+@mixin text-preset-2b {
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+@mixin text-preset-2l {
+  font-size: 3rem;
+  line-height: 1.33;
+  letter-spacing: -0.6px;
+  font-weight: 300;
+}
+
+@mixin text-preset-3($ft-wt) {
+  font-size: 2rem;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+  font-weight: $ft-wt;
+}
+
+@mixin text-preset-4b {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: -0.25px;
+  font-weight: 700;
+}
+
+@mixin text-preset-4r {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@mixin text-preset-5 {
+  font-size: u.pxRem(17);
+  line-height: 0.95;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+}
+
+@mixin text-preset-6 {
+  font-size: 1rem;
+  line-height: 1.625;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@mixin text-preset-7 {
+  font-size: u.pxRem(14);
+  line-height: 2;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+@mixin text-preset-8 {
+  font-size: u.pxRem(10);
+  line-height: 1;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  @include u.bp-max(lap) {
+    text-align: center;
+  }
+}
+
+h1 {
+  @include text-preset-3(300);
+
+  @include u.bp(lap) {
+    @include text-preset-2l;
+  }
+
+  @include u.bp(desk) {
+    @include text-preset-1;
+  }
+}
+
+h2 {
+  @include text-preset-3(700);
+
+  @include u.bp(lap) {
+    @include text-preset-2b;
+  }
+}
+
+h3 {
+  @include text-preset-4b;
+}
+
+p {
+  @include text-preset-6;
+
+  @include u.bp(lap) {
+    @include text-preset-4r;
+  }
+
+  &.small {
+    @include text-preset-6;
+  }
+}

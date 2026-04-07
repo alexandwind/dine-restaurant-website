@@ -1,0 +1,79 @@
+@use '../util' as u;
+@use '../global/typography' as t;
+
+:root {
+  box-sizing: border-box;
+  font-size: 100%;
+  scrollbar-color: red yellow;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+a {
+  display: inline-block;
+}
+
+a,
+a:link,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: u.$ft-lg-spartan;
+  background-color: var(--bg-main);
+  color: var(--text-primary-lt);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+
+  &:focus {
+    left: 0;
+    width: auto;
+    height: auto;
+    background-color: var(--bg-main);
+    padding: 0.5rem;
+    border: 1px solid;
+  }
+}
+
+.hover-fade {
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+
+  &:hover {
+    opacity: 0.77;
+  }
+}

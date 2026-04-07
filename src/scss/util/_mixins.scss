@@ -1,0 +1,14 @@
+@use 'sass:map' as m;
+@use '../util/breakpoints' as b;
+
+@mixin bp($size) {
+  @media (width >= m.get(b.$breakpoints-min, $size)) {
+    @content;
+  }
+}
+
+@mixin bp-max($size) {
+  @media (width <= m.get(b.$breakpoints-max, $size)) {
+    @content;
+  }
+}

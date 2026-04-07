@@ -1,0 +1,15 @@
+@use '../util/functions' as f;
+
+$breakpoints-min: (
+  'tab': f.pxRem(480),
+  'lap': f.pxRem(770),
+  'desk': f.pxRem(1190),
+  'desk-lg': f.pxRem(1440),
+);
+
+$breakpoints-max: (
+  'mob': f.pxRem(479.98),
+  'tab': f.pxRem(769.98),
+  'lap': f.pxRem(1189.98),
+  'desk': f.pxRem(1439.98),
+);
