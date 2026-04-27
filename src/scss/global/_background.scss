@@ -1,0 +1,6 @@
+:root {
+  --divide-bg: image-set(
+    url('/src/assets/patterns/pattern-divide@2x.png') 2x;
+      url('/src/assets/patterns/pattern-divide@3x.png') 3x
+  );
+}

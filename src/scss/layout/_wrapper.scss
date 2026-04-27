@@ -10,6 +10,7 @@
 
   > .fullbleed {
     width: min(100%, u.pxRem(1440));
+    margin-inline: auto;
     grid-column: 1 / -1;
   }
 

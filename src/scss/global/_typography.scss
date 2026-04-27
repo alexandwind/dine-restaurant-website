@@ -102,6 +102,10 @@ h2 {
 
 h3 {
   @include text-preset-4b;
+  text-align: start;
+  @include u.bp-max(tab) {
+    text-align: center;
+  }
 }
 
 p {
@@ -113,5 +117,10 @@ p {
 
   &.small {
     @include text-preset-6;
+    text-align: start;
+
+    @include u.bp-max(tab) {
+      text-align: center;
+    }
   }
 }

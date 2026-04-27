@@ -1,0 +1,82 @@
+@use '../util' as u;
+
+.highlights {
+  padding-block: 5.5rem;
+
+  @include u.bp(lap) {
+    padding-block: 6rem;
+  }
+  @include u.bp(desk) {
+    padding-block-start: 10.5rem;
+    padding-block-end: 7.5rem;
+  }
+  @include u.bp(desk-lg) {
+    padding-block-start: 12.5rem;
+  }
+
+  &__wrapper {
+    display: grid;
+    row-gap: 5rem;
+
+    @include u.bp(lap) {
+      row-gap: 3rem;
+    }
+
+    @include u.bp(desk) {
+      grid-auto-flow: column;
+    }
+  }
+
+  &__header {
+    display: grid;
+    row-gap: 0.75rem;
+
+    @include u.bp(lap) {
+      justify-items: center;
+      row-gap: 2rem;
+    }
+
+    @include u.bp(desk) {
+      justify-items: start;
+      align-content: start;
+      row-gap: 1.5rem;
+    }
+  }
+  &__title {
+    position: relative;
+    margin-block-start: 2.5rem;
+
+    @include u.bp(lap) {
+      max-width: 17ch;
+    }
+
+    @include u.bp(desk) {
+      margin-block-start: 3rem;
+    }
+
+    &::before {
+      @include u.before-svg;
+    }
+  }
+
+  &__description {
+    @include u.bp(lap) {
+      max-width: 37ch;
+    }
+  }
+  &__cards {
+    display: grid;
+    gap: 1.5rem;
+
+    @include u.bp(lap) {
+      justify-items: center;
+    }
+  }
+
+  &__card {
+    border-bottom: 1px solid var(--card-border);
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}

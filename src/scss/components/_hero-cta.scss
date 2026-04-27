@@ -3,45 +3,71 @@
 .hero-cta {
   &__wrapper {
     display: grid;
-    z-index: 4;
-    position: relative;
-    padding-block-end: u.pxRem(154);
+    justify-items: center;
+
+    @include u.bp-max(tab) {
+      grid-template-rows: var(--clamp-304-454) repeat(3, auto);
+    }
+
+    @include u.bp(tab) {
+      grid-template-rows: var(--clamp-330-480) repeat(3, auto);
+    }
 
     @include u.bp(lap) {
-      padding-block-end: u.pxRem(210);
+      grid-template-rows: var(--clamp-480-680) repeat(3, auto);
     }
 
     @include u.bp(desk) {
-      padding-block-end: u.pxRem(198);
+      grid-template-rows: 16.125rem repeat(3, auto);
+      justify-items: start;
     }
   }
 
-  &__background {
+  &__image {
+    grid-row: 1 / -1;
   }
 
   &__text {
+    display: grid;
+    grid-row: 2;
+    justify-items: center;
+
+    @include u.bp(desk) {
+      justify-items: start;
+    }
   }
 
   &__title {
     margin-block-end: 1.25rem;
 
+    @include u.bp(tab) {
+      margin-block-end: u.pxRem(10);
+    }
+
     @include u.bp(desk) {
       margin-block-end: u.pxRem(10);
-      max-width: 31.75rem;
     }
   }
   &__description {
     margin-block-end: 3rem;
 
+    @include u.bp(tab) {
+      margin-block-end: 1rem;
+      max-width: 48ch;
+    }
+
     @include u.bp(lap) {
       margin-block-end: 3.5rem;
+      max-width: 48ch;
     }
 
     @include u.bp(desk) {
-      margin-block-end: 2.5rem;
-      max-width: 27.8rem;
+      margin-block-end: var(--clamp-20-40);
+      max-width: 37ch;
     }
   }
   &__button-link {
+    grid-row: 3;
+    align-self: center;
   }
 }

@@ -1,4 +1,25 @@
 :root {
   // from 375px to 770px
   --clamp-232-374: clamp(14.5rem, 6.07436709rem + 35.94936709vw, 23.375rem);
+  --clamp-304-454: clamp(19rem, 10.0997rem + 37.9747vw, 28.375rem);
+
+  //from 480px to 770px
+  --clamp-330-480: clamp(20.625rem, 5.10776rem + 51.724138vw, 30rem);
+  --clamp-10-20: clamp(0.625rem, -0.40948276rem + 3.448276vw, 1.25rem);
+
+  // from 770px to 1190px
+  --clamp-374-544: clamp(23.375rem, 3.8958333rem + 40.4761905vw, 34rem);
+  --clamp-454-624: clamp(28.375rem, 8.8958333rem + 40.4761905vw, 39rem);
+  --clamp-480-680: clamp(30rem, 7.08333rem + 47.619048vw, 42.5rem);
+  --clamp-13_5r-27r: clamp(13.5rem, -11.25rem + 51.42857143vw, 27rem);
+  --clamp-21_5r-33_125r: clamp(21.5rem, 0.1875rem + 44.2857143vw, 33.125rem);
+
+  // from 770px to 1440px
+  --clamp-40-112: clamp(2.5rem, -2.671641791rem + 10.746268657vw, 7rem);
+
+  // from 375px to 1190px
+  --clamp-232-544: clamp(14.5rem, 5.527607362rem + 38.2822086vw, 34rem);
+
+  // from 1190px to 1440px
+  --clamp-20-40: clamp(1.25rem, -4.7rem + 8vw, 2.5rem);
 }

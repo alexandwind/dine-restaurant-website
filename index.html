@@ -25,28 +25,6 @@
   </head>
   <body>
     <header class="header wrapper">
-      <picture class="header__background fullbleed">
-        <source
-          width="2880"
-          height="1640"
-          media="(width >= 74.375rem)"
-          srcset="/src/assets/homepage/hero-bg-desktop@2x.jpg"
-        />
-
-        <source
-          width="1536"
-          height="1984"
-          media="(width >= 48.75rem)"
-          srcset="/src/assets/homepage/hero-bg-tablet@2x.jpg"
-        />
-
-        <img
-          width="750"
-          height="1496"
-          src="/src/assets/homepage/hero-bg-mobile@2x.jpg"
-          alt="A plate of spaghetti pasta with shrimp"
-        />
-      </picture>
       <a href="/" class="header__home-link"
         ><img
           class="header__home-logo"
@@ -63,10 +41,35 @@
     </header>
 
     <main>
-      <section class="hero-cta wrapper">
-        <div class="hero-cta__wrapper">
+      <section class="hero-cta">
+        <div class="hero-cta__wrapper wrapper">
+          <picture class="hero-cta__image fullbleed">
+            <source
+              width="2880"
+              height="1640"
+              media="(width >= 74.375rem)"
+              srcset="/src/assets/homepage/hero-bg-desktop@2x.jpg"
+            />
+
+            <source
+              width="1536"
+              height="1984"
+              media="(width >= 30rem)"
+              srcset="/src/assets/homepage/hero-bg-tablet@2x.jpg"
+            />
+
+            <img
+              width="750"
+              height="1496"
+              src="/src/assets/homepage/hero-bg-mobile@2x.jpg"
+              alt="A plate of spaghetti pasta with shrimp"
+            />
+          </picture>
           <div class="hero-cta__text">
-            <h1 class="hero-cta__title">Exquisite dining since 1989</h1>
+            <h1 class="hero-cta__title">
+              Exquisite dining <br />
+              since 1989
+            </h1>
             <p class="hero-cta__description">
               Experience our seasonal menu in beautiful country surroundings.
               Eat the freshest produce from the comfort of our farmhouse.
@@ -78,17 +81,212 @@
           >
         </div>
       </section>
+      <section class="features wrapper">
+        <div class="features__feature">
+          <img
+            width="895"
+            height="320"
+            class="features__pattern hide-on-tablet"
+            src="/src/assets/patterns/pattern-curve-top-right.svg"
+            alt=""
+          />
+          <div class="features__picture">
+            <picture class="features__image">
+              <source
+                width="1080"
+                height="1440"
+                media="(width >= 74.375rem)"
+                srcset="/src/assets/homepage/enjoyable-place-desktop@2x.jpg"
+              />
+
+              <source
+                width="1146"
+                height="720"
+                media="(width >= 48.125rem)"
+                srcset="/src/assets/homepage/enjoyable-place-tablet@2x.jpg"
+              />
+
+              <img
+                class="has-shadow"
+                width="654"
+                height="800"
+                src="/src/assets/homepage/enjoyable-place-mobile@2x.jpg"
+                alt="A picturesque autumn countryside scene with sheep grazing beside a stream  near a stone bridge"
+              />
+            </picture>
+          </div>
+
+          <div class="features__text">
+            <h2 class="features__label">
+              Enjoyable place <br />
+              for all the family
+            </h2>
+            <p class="features__description">
+              Our relaxed surroundings make dining with us a great experience
+              for everyone. We can even arrange a tour of the farm before your
+              meal.
+            </p>
+          </div>
+        </div>
+
+        <div class="features__feature">
+          <img
+            width="895"
+            height="320"
+            class="features__pattern hide-on-tablet"
+            src="/src/assets/patterns/pattern-curve-top-left.svg"
+            alt=""
+          />
+          <div class="features__picture lower">
+            <picture class="features__image">
+              <source
+                width="1080"
+                height="1440"
+                media="(width >= 74.375rem)"
+                srcset="/src/assets/homepage/locally-sourced-desktop@2x.jpg"
+              />
+
+              <source
+                width="1146"
+                height="720"
+                media="(width >= 48.125rem)"
+                srcset="/src/assets/homepage/locally-sourced-tablet@2x.jpg"
+              />
+
+              <img
+                class="has-shadow"
+                width="654"
+                height="800"
+                src="/src/assets/homepage/locally-sourced-mobile@2x.jpg"
+                alt="Poached egg served over sautéed mushrooms with bread, garnished by hand"
+              />
+            </picture>
+
+            <img
+              width="160"
+              height="76"
+              src="/src/assets/patterns/pattern-lines.svg"
+              alt=""
+              class="features__pattern-lines hide-on-tablet"
+            />
+          </div>
+
+          <div class="features__text lower">
+            <h2 class="features__label">
+              The most locally <br />
+              sourced food
+            </h2>
+            <p class="features__description">
+              All our ingredients come directly from our farm or local fishery.
+              So you can be sure that you’re eating the freshest, most
+              sustainable food.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="highlights wrapper">
+        <div class="highlights__wrapper">
+          <div class="highlights__header">
+            <h2 class="highlights__title">A few highlights from our menu</h2>
+            <p class="highlights__description">
+              We cater for all dietary requirements, but here’s a glimpse at
+              some of our diner’s favourites. Our menu is revamped every season.
+            </p>
+          </div>
+          <ul class="highlights__cards">
+            <li class="highlights__card">
+              <article class="card">
+                <div class="card__picture-div">
+                  <picture class="card__picture">
+                    <source
+                      width="256"
+                      height="192"
+                      media="(width >= 48.125rem)"
+                      srcset="/src/assets/homepage/salmon-desktop-tablet@2x.jpg"
+                    />
+
+                    <img
+                      width="654"
+                      height="490"
+                      src="/src/assets/homepage/salmon-mobile@2x.jpg"
+                      alt="Fine‑dining plate with seared salmon, herb‑grain salad, green puree, orange drizzle, and edible petals"
+                    />
+                  </picture>
+                </div>
+                <div class="card__text">
+                  <h3 class="card__title">Seared Salmon Fillet</h3>
+                  <p class="card__description small">
+                    Our locally sourced salmon served with a refreshing
+                    buckwheat summer salad.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li class="highlights__card">
+              <article class="card">
+                <div class="card__picture-div">
+                  <picture class="card__picture">
+                    <source
+                      width="256"
+                      height="192"
+                      media="(width >= 48.125rem)"
+                      srcset="/src/assets/homepage/beef-desktop-tablet@2x.jpg"
+                    />
+
+                    <img
+                      width="654"
+                      height="490"
+                      src="/src/assets/homepage/beef-mobile@2x.jpg"
+                      alt="Fine‑dining plate with seared salmon, herb‑grain salad, green puree, orange drizzle, and edible petals"
+                    />
+                  </picture>
+                </div>
+                <div class="card__text">
+                  <h3 class="card__title">Rosemary Filet Mignon</h3>
+                  <p class="card__description small">
+                    Our prime beef served to your taste with a delicious choice
+                    of seasonal sides.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li class="highlights__card">
+              <article class="card">
+                <div class="card__picture-div">
+                  <picture class="card__picture">
+                    <source
+                      width="256"
+                      height="192"
+                      media="(width >= 48.125rem)"
+                      srcset="
+                        /src/assets/homepage/chocolate-desktop-tablet@2x.jpg
+                      "
+                    />
+
+                    <img
+                      width="654"
+                      height="490"
+                      src="/src/assets/homepage/chocolate-mobile@2x.jpg"
+                      alt="Fine‑dining plate with seared salmon, herb‑grain salad, green puree, orange drizzle, and edible petals"
+                    />
+                  </picture>
+                </div>
+                <div class="card__text">
+                  <h3 class="card__title">Summer Fruit Chocolate Mousse</h3>
+                  <p class="card__description small">
+                    Creamy mousse combined with summer fruits and dark chocolate
+                    shavings.
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <footer></footer>
 
-    <!-- Exquisite dining since 1989 Experience our seasonal menu in beautiful
-    country surroundings. Eat the freshest produce from the comfort of our
-    farmhouse. Book a table Enjoyable place for all the family Our relaxed
-    surroundings make dining with us a great experience for everyone. We can
-    even arrange a tour of the farm before your meal. The most locally sourced
-    food All our ingredients come directly from our farm or local fishery. So
-    you can be sure that you’re eating the freshest, most sustainable food. A
-    few highlights from our menu We cater for all dietary requirements, but
+    <!--   A few highlights from our menu We cater for all dietary requirements, but
     here’s a glimpse at some of our diner’s favourites. Our menu is revamped
     every season. Seared Salmon Fillet Our locally sourced salmon served with a
     refreshing buckwheat summer salad. Rosemary Filet Mignon Our prime beef

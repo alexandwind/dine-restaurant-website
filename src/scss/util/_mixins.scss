@@ -12,3 +12,28 @@
     @content;
   }
 }
+
+@mixin before-svg {
+  position: absolute;
+  top: -2rem;
+  content: '';
+  background: url('/src/assets/patterns/pattern-divide.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 71px;
+  height: 7px;
+
+  @include bp(lap) {
+    top: -2.5rem;
+  }
+
+  @include bp-max(lap) {
+    left: 50%;
+    translate: -50% 0;
+  }
+
+  @include bp(desk) {
+    top: -3rem;
+    left: 0;
+  }
+}

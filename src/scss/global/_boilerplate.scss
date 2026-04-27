@@ -28,7 +28,7 @@ a:visited {
 
 body {
   font-family: u.$ft-lg-spartan;
-  background-color: var(--bg-main);
+  background-color: var(--bg-main-dk);
   color: var(--text-primary-lt);
 }
 
@@ -40,6 +40,11 @@ h4,
 p,
 ul {
   margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 img {
@@ -76,4 +81,20 @@ img {
   &:hover {
     opacity: 0.77;
   }
+}
+
+.hide-on-mobile {
+  @include u.bp-max(mob) {
+    display: none;
+  }
+}
+
+.hide-on-tablet {
+  @include u.bp-max(tab) {
+    display: none;
+  }
+}
+
+.has-shadow {
+  box-shadow: 0 75px 100px -50px var(--shadow);
 }
