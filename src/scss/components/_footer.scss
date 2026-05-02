@@ -1,0 +1,55 @@
+@use '../util' as u;
+
+.footer {
+  padding-block: 5rem;
+
+  @include u.bp(lap) {
+    padding-block: 4rem;
+  }
+
+  @include u.bp(desk) {
+    padding-block: 5rem;
+  }
+
+  &__wrapper {
+    display: grid;
+    justify-items: center;
+    row-gap: 2.5rem;
+
+    @include u.bp(lap) {
+      grid-auto-flow: column;
+      justify-items: start;
+    }
+    @include u.bp(desk) {
+      justify-content: space-between;
+    }
+  }
+
+  &__info-container {
+    display: grid;
+    row-gap: 2rem;
+
+    @include u.bp(lap) {
+      justify-items: start;
+    }
+
+    @include u.bp(desk) {
+      grid-auto-flow: column;
+      width: 51rem;
+    }
+  }
+
+  &__contacts,
+  &__open-times {
+    display: grid;
+    row-gap: 0.5rem;
+
+    @include u.bp(lap) {
+      justify-items: start;
+    }
+  }
+
+  &__open-times {
+    text-transform: uppercase;
+  }
+}

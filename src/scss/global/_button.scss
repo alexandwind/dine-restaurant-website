@@ -19,4 +19,17 @@
   @include u.bp-max(lap) {
     justify-self: center;
   }
+
+  &.dark {
+    background: var(--bg-main-dk);
+    color: var(--text-primary-lt);
+    transition: 250ms ease-in-out;
+    transition-property: color, background;
+    align-self: center;
+  }
+  &.dark:hover {
+    background: var(--bg-main-lt);
+    color: var(--text-primary-dk);
+    border: 1px solid var(--bg-main-dk);
+  }
 }

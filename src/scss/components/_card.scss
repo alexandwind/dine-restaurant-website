@@ -36,8 +36,7 @@
     display: grid;
     row-gap: 0.5rem;
   }
-  &__title {
-  }
+
   &__description {
     @include u.bp(lap) {
       max-width: 38ch;

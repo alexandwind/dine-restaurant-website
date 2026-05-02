@@ -1,0 +1,163 @@
+@use '../util' as u;
+
+.events {
+  position: relative;
+  background: var(--bg-main-lt);
+  color: var(--text-primary-dk);
+  padding-block-start: 5rem;
+  padding-block-end: 6rem;
+
+  @include u.bp(lap) {
+    padding-block: 7.5rem;
+  }
+
+  @include u.bp(desk) {
+    padding-block: 10rem;
+  }
+
+  &__pattern {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: scaleY(-100%);
+
+    @include u.bp(desk) {
+      left: -40%;
+      right: auto;
+    }
+  }
+  &__container {
+    display: grid;
+    justify-items: center;
+    row-gap: 3rem;
+
+    @include u.bp(lap) {
+      row-gap: 3.5rem;
+    }
+
+    @include u.bp(desk) {
+      grid-auto-flow: column;
+      justify-content: space-between;
+    }
+  }
+  &__picture-div {
+    position: relative;
+
+    @include u.bp(lap) {
+      width: 36rem;
+      height: 22.5rem;
+    }
+    @include u.bp(desk) {
+      width: 33.75rem;
+      height: 37.5rem;
+    }
+  }
+  &__pattern-lines {
+    position: absolute;
+    top: -2.5rem;
+    left: -3.625rem;
+
+    @include u.bp(desk) {
+      left: -2.5rem;
+    }
+  }
+  &__links-cta {
+    display: grid;
+    justify-items: center;
+    row-gap: 2.5rem;
+
+    @include u.bp(lap) {
+      row-gap: 3rem;
+    }
+
+    @include u.bp(desk) {
+      row-gap: 5rem;
+      justify-items: start;
+      align-content: center;
+    }
+  }
+  &__links {
+    display: grid;
+    justify-items: center;
+    row-gap: 1.5rem;
+
+    @include u.bp(lap) {
+      grid-auto-flow: column;
+      width: 43rem;
+    }
+
+    @include u.bp(desk) {
+      grid-auto-flow: row;
+      justify-items: start;
+      order: 2;
+      width: auto;
+    }
+  }
+  &__item {
+    position: relative;
+  }
+  &__item:first-child {
+    margin-block-end: 0.625rem;
+
+    @include u.bp(lap) {
+      margin-block-end: 1.25rem;
+    }
+
+    @include u.bp(desk) {
+      margin-block-end: 0;
+    }
+  }
+  &__item:first-child::after {
+    content: '';
+    position: absolute;
+    width: 3rem;
+    height: 1px;
+    background-color: var(--card-after);
+    left: 50%;
+    translate: -50% 0;
+    bottom: -0.625rem;
+
+    @include u.bp(desk) {
+      width: 6rem;
+
+      top: 0.5rem;
+      left: 0;
+      translate: calc((100% + 2rem) * -1);
+    }
+  }
+  &__link {
+    &.event {
+      color: var(--text-secondary-dk);
+      transition: color 250ms ease-in-out;
+      &:hover {
+        color: var(--text-primary-dk);
+      }
+    }
+  }
+  &__cta {
+    display: grid;
+    justify-items: center;
+
+    @include u.bp(desk) {
+      order: 1;
+      justify-items: start;
+    }
+  }
+  &__title {
+    margin-block-end: 0.75rem;
+
+    @include u.bp(lap) {
+      margin-block-end: 1.25rem;
+    }
+  }
+  &__description {
+    margin-block-end: 2rem;
+    @include u.bp(lap) {
+      margin-block-end: 3.5rem;
+      max-width: 40ch;
+    }
+    @include u.bp(desk) {
+      max-width: 37ch;
+    }
+  }
+}
