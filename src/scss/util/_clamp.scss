@@ -22,4 +22,7 @@
 
   // from 1190px to 1440px
   --clamp-20-40: clamp(1.25rem, -4.7rem + 8vw, 2.5rem);
+
+  // from 1190px to 1270px
+  --clamp-29_5rem-34_5rem: clamp(29.5rem, -44.875rem + 100vw, 34.5rem);
 }

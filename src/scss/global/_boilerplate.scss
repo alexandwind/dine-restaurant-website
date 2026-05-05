@@ -27,9 +27,19 @@ a:visited {
 }
 
 body {
-  font-family: u.$ft-lg-spartan;
   background-color: var(--bg-main-dk);
   color: var(--text-primary-lt);
+}
+
+button,
+body {
+  font-family: u.$ft-lg-spartan;
+}
+
+section,
+body {
+  // no more horizontal scroll allowed
+  overflow-x: clip;
 }
 
 body,
@@ -51,6 +61,11 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.bg-light {
+  background-color: var(--bg-main-lt);
+  color: var(--text-primary-dk);
 }
 
 .visually-hidden {

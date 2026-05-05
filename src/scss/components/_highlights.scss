@@ -51,7 +51,7 @@
     }
 
     @include u.bp(desk) {
-      margin-block-start: 3rem;
+      margin-block-start: 0;
     }
 
     &::before {
@@ -73,10 +73,9 @@
     }
   }
 
-  &__card {
-    border-bottom: 1px solid var(--card-border);
-    &:last-child {
-      border-bottom: 0;
+  &__cards-item {
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--card-border);
     }
   }
 }
