@@ -25,6 +25,16 @@
     }
   }
 
+  &__logo {
+    width: u.pxRem(82);
+    height: 2rem;
+
+    @include u.bp(lap) {
+      width: u.pxRem(103);
+      height: 2.5rem;
+    }
+  }
+
   &__info-container {
     display: grid;
     row-gap: 2rem;

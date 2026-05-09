@@ -1,0 +1,64 @@
+@use '../util' as u;
+
+.booking-header {
+  padding-block-start: 3.5rem;
+  padding-block-end: u.pxRem(267);
+  background: var(--booking-bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include u.bp(desk) {
+    padding-block-start: 4rem;
+    padding-block-end: u.pxRem(152);
+  }
+
+  &__wrapper {
+    display: grid;
+    justify-items: center;
+    row-gap: 5.5rem;
+
+    @include u.bp(lap) {
+      row-gap: u.pxRem(70);
+    }
+
+    @include u.bp(desk) {
+      justify-items: start;
+      row-gap: u.pxRem(153);
+    }
+  }
+
+  &__home-link {
+    @include u.bp(lap) {
+      justify-self: start;
+    }
+  }
+  &__home-logo {
+    width: u.pxRem(82);
+    height: 2rem;
+
+    @include u.bp(lap) {
+      width: u.pxRem(103);
+      height: 2.5rem;
+    }
+  }
+  &__text {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 0.75rem;
+
+    @include u.bp(desk) {
+      row-gap: 1.25rem;
+    }
+  }
+  &__description {
+    max-width: 28ch;
+
+    @include u.bp(lap) {
+      max-width: 49ch;
+    }
+
+    @include u.bp(desk) {
+      max-width: 38ch;
+    }
+  }
+}

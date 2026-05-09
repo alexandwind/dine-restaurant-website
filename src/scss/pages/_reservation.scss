@@ -1,0 +1,53 @@
+@use '../util' as u;
+
+.reservation {
+  position: relative;
+
+  .form {
+    position: absolute;
+    top: -8.56rem;
+    left: 50%;
+    translate: -50% 0;
+
+    @include u.bp(lap) {
+      top: -14.375rem;
+    }
+
+    @include u.bp(desk) {
+      top: -21.5rem;
+      left: calc(50% + 270px);
+    }
+  }
+
+  &__wrapper {
+    padding-block-end: u.pxRem(534);
+    position: relative;
+
+    @include u.bp(lap) {
+      padding-block-end: u.pxRem(435);
+    }
+
+    @include u.bp(desk) {
+      padding-block-end: 20rem;
+    }
+  }
+
+  &__pattern {
+    @include u.bp-max(lap) {
+      display: none;
+    }
+    position: absolute;
+    width: u.pxRem(993);
+    left: calc((u.pxRem(165) * -1));
+  }
+
+  &__pattern-lines {
+    @include u.bp-max(lap) {
+      display: none;
+    }
+    position: absolute;
+    bottom: 76px;
+    left: 50%;
+    translate: -50%;
+  }
+}

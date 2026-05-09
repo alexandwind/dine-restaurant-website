@@ -21,9 +21,9 @@
     <link rel="manifest" href="/favicon/site.webmanifest" />
 
     <title>Dine Website</title>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.js" defer></script>
   </head>
-  <body>
+  <body data-page="home">
     <header class="header wrapper">
       <a href="/" class="header__home-link"
         ><img
@@ -525,7 +525,9 @@
         <div class="wrapper">
           <div class="cta__container">
             <h2 class="cta__label">Ready to make a reservation?</h2>
-            <a href="" class="cta__button-link button">Book a table</a>
+            <a href="/booking.html" class="cta__button-link button"
+              >Book a table</a
+            >
           </div>
         </div>
       </section>

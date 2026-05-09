@@ -1,0 +1,108 @@
+@use '../util' as u;
+@use '../global/typography' as t;
+
+.form {
+  padding: 2.25rem 2rem;
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  justify-items: center;
+  gap: 2rem;
+
+  @include u.bp(lap) {
+    padding: 3rem;
+  }
+
+  &,
+  &__input,
+  &__label,
+  &__counter-input,
+  &__input:focus,
+  &__input::placeholder,
+  &__input:focus::placeholder,
+  &__input:hover::placeholder {
+    @include t.text-preset-4r;
+    font-family: u.$ft-lg-spartan;
+    background: var(--bg-main-lt);
+  }
+
+  &__field-date,
+  &__field-time {
+    display: grid;
+    row-gap: 0.5rem;
+
+    @include u.bp(lap) {
+      grid-auto-flow: column;
+      column-gap: 4rem;
+    }
+  }
+
+  &__field,
+  &__field-date,
+  &__field-time {
+    border-bottom: 1px solid var(--bottom-border);
+  }
+
+  &__field {
+    &.counter {
+      display: grid;
+      grid-template-columns: 1fr u.pxRem(48) 1fr;
+    }
+  }
+
+  &__input,
+  &__field {
+    width: u.pxRem(263);
+
+    @include u.bp(lap) {
+      width: u.pxRem(444);
+    }
+
+    &.uppercase {
+      text-transform: uppercase;
+
+      @include u.bp(lap) {
+        width: u.pxRem(290);
+      }
+    }
+  }
+
+  &__input,
+  &__counter-input,
+  &__input:focus,
+  &__input::placeholder,
+  &__input:focus::placeholder,
+  &__input:hover::placeholder {
+    padding: 0 0 0.875rem 1rem;
+    outline: 0;
+    border: 0;
+  }
+
+  &__input::placeholder,
+  &__input:focus::placeholder {
+    color: var(--text-secondary-dk);
+  }
+
+  &__counter-input,
+  &__counter {
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  &__button {
+    padding: 1.5rem 2.25rem;
+  }
+
+  &__counter {
+    padding: u.pxRem(10) u.pxRem(10) u.pxRem(24);
+    border: 0;
+    background: none;
+    color: var(--counter);
+
+    &:first-child {
+      justify-self: start;
+    }
+    &:last-child {
+      justify-self: end;
+    }
+  }
+}

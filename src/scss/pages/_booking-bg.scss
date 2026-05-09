@@ -1,0 +1,26 @@
+@use '../util' as u;
+
+:root {
+  --booking-bg: image-set(
+    url('/src/assets/booking/hero-bg-mobile.jpg') 1x,
+    url('/src/assets/booking/hero-bg-mobile@2x.jpg') 2x
+  );
+}
+
+@include u.bp(lap) {
+  :root {
+    --booking-bg: image-set(
+      url('/src/assets/booking/hero-bg-tablet.jpg') 1x,
+      url('/src/assets/booking/hero-bg-tablet@2x.jpg') 2x
+    );
+  }
+}
+
+@include u.bp(desk) {
+  :root {
+    --booking-bg: image-set(
+      url('/src/assets/booking/hero-bg-desktop.jpg') 1x,
+      url('/src/assets/booking/hero-bg-desktop@2x.jpg') 2x
+    );
+  }
+}

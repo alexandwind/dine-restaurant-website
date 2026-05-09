@@ -12,6 +12,7 @@
   transition-property: color, background;
 
   &:hover {
+    cursor: pointer;
     color: var(--text-primary-dk);
     background: var(--bg-main-lt);
   }
@@ -26,8 +27,18 @@
     transition: 250ms ease-in-out;
     transition-property: color, background;
     align-self: center;
+
+    &.dk-form {
+      padding: 1.5rem 2.25rem;
+
+      @include u.bp(lap) {
+        width: u.pxRem(444);
+      }
+    }
   }
+
   &.dark:hover {
+    cursor: pointer;
     background: var(--bg-main-lt);
     color: var(--text-primary-dk);
     border: 1px solid var(--bg-main-dk);

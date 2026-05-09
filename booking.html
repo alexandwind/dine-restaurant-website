@@ -1,38 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Dine Website Challenge</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
 
-  Reservations
+    <title>Dine Website: Booking page</title>
+    <script type="module" src="/src/main.js" defer></script>
+  </head>
+  <body data-page="booking">
+    <header class="booking-header wrapper">
+      <div class="booking-header__wrapper">
+        <a href="/" class="booking-header__home-link"
+          ><img
+            class="booking-header__home-logo"
+            width="103"
+            height="40"
+            src="/src/assets/homepage/dine-logo@2x.png"
+            srcset="/src/assets/homepage/dine-logo@3x.png 3x"
+            alt="Dine Home Page"
+            class="header__icon-logo"
+        /></a>
 
-  We can’t wait to host you. If you have any special requirements please feel free to 
-  call on the phone number below. We’ll be happy to accommodate you.
+        <div class="booking-header__text">
+          <h1 class="booking-header__label">Reservations</h1>
+          <p class="booking-header__description">
+            We can’t wait to host you. If you have any special requirements
+            please feel free to call on the phone number below. We’ll be happy
+            to accommodate you.
+          </p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="reservation bg-light">
+        <h2 class="visually-hidden">Reservation</h2>
 
+        <div class="wrapper reservation__wrapper">
+          <img
+            width="993"
+            height="320"
+            class="reservation__pattern"
+            src="/src/assets/patterns/pattern-curve-bottom-right.svg"
+            alt=""
+          />
+        </div>
 
+        <img
+          class="reservation__pattern-lines"
+          width="160"
+          height="76"
+          src="/src/assets/patterns/pattern-lines.svg"
+          alt=""
+        />
 
-  Name
-  Email
-  Pick a date
-  Pick a time
+        <form action="" class="reservation__form form has-shadow">
+          <div class="form__field">
+            <label for="name" class="visually-hidden">Name</label>
+            <input
+              class="form__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              autocomplete="name"
+              pattern="^[\p{L}][\p{L}'\- ]{1,47}$"
+              title="Enter your name at least 3 letters"
+              minlength="3"
+              required
+            />
+          </div>
+          <div class="form__field">
+            <label for="email" class="visually-hidden">Email</label>
+            <input
+              class="form__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              autocomplete="email"
+              title="Enter your email"
+              autocomplete="email"
+              inputmode="email"
+              required
+            />
+          </div>
 
-  Make Reservation
+          <div class="form__field-date">
+            <label class="form__label" for="date">Pick a date</label>
+            <input
+              class="form__input uppercase"
+              type="date"
+              id="date"
+              name="date"
+              title="Enter booking date"
+              required
+            />
+          </div>
 
+          <div class="form__field-time">
+            <label class="form__label" for="time">Pick a time</label>
+            <input
+              class="form__input uppercase"
+              type="time"
+              id="time"
+              name="time"
+              title="Enter booking time"
+              required
+            />
+          </div>
 
+          <div class="form__field counter">
+            <button class="form__counter" type="button" id="minus">−</button>
+            <label class="visually-hidden" for="number">Number of guests</label>
+            <!-- readonly  - make non functional arrows of number type -->
+            <input
+              class="form__counter-input"
+              id="people"
+              name="people"
+              type="number"
+              value="1"
+              min="1"
+              title="Enter number of guests"
+              required
+            />
+            <button class="form__counter" type="button" id="plus">+</button>
+          </div>
 
-  Marthwaite, Sedbergh
-  Cumbria
-  +00 44 123 4567
+          <button type="submit" class="button dark dk-form submit-btn">
+            Make reservation
+          </button>
+          <p id="form-status" class="form__status visually-hidden"></p>
+        </form>
+      </section>
+    </main>
+    <footer class="footer wrapper">
+      <h2 class="visually-hidden">Footer</h2>
+      <div class="footer__wrapper">
+        <a href="/" class="footer__logo-homelink">
+          <img
+            class="footer__logo"
+            width="103"
+            height="40"
+            src="/src/assets/homepage/dine-logo@2x.png"
+            srcset="/src/assets/homepage/dine-logo@3x.png 3x"
+            alt="Dine Home Page"
+          />
+        </a>
 
-  Open Times
-  Mon - Fri: 09:00 AM - 10:00 PM
-  Sat - Sun: 09:00 AM - 11:30 PM
+        <div class="footer__info-container">
+          <ul class="footer__location-contact">
+            <li class="footer__item">
+              <p class="footer__info contact">Marthwaite, Sedbergh</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__info contact">Cumbria</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__info contact">
+                <a href="tel:+100441234567">+00 44 123 4567</a>
+              </p>
+            </li>
+          </ul>
 
-</body>
+          <ul class="footer__times">
+            <li class="footer__item">
+              <p class="footer__info contact">Open times</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__info contact">mon - fri: 09:00 am - 10:00 pm</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__info contact">sat - sun: 09:00 am - 11:30 pm</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
