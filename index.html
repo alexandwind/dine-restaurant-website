@@ -284,244 +284,236 @@
       </section>
 
       <section class="wrapper booking-events bg-light">
-        <div class="booking-events__wrapper">
-          <h2 class="visually-hidden">Booking events</h2>
-          <div class="tabs">
-            <div
-              class="booking-events__tabs"
-              role="tablist"
-              aria-label="Select your event"
+        <h2 class="visually-hidden">Booking events</h2>
+        <div class="tabs">
+          <div
+            class="booking-events__tabs"
+            role="tablist"
+            aria-label="Select your event"
+          >
+            <button
+              class="booking-events__tab"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-1"
+              id="tab-1"
+              tabindex="0"
             >
-              <button
-                class="booking-events__tab"
-                role="tab"
-                aria-selected="true"
-                aria-controls="panel-1"
-                id="tab-1"
-                tabindex="0"
-              >
-                Family gathering
-              </button>
-              <button
-                class="booking-events__tab event"
-                role="tab"
-                aria-selected="false"
-                aria-controls="panel-2"
-                id="tab-2"
-                tabindex="-1"
-              >
-                Special events
-              </button>
-              <button
-                class="booking-events__tab event"
-                role="tab"
-                aria-selected="false"
-                aria-controls="panel-3"
-                id="tab-3"
-                tabindex="-1"
-              >
-                Social events
-              </button>
+              Family gathering
+            </button>
+            <button
+              class="booking-events__tab event"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-2"
+              id="tab-2"
+              tabindex="-1"
+            >
+              Special events
+            </button>
+            <button
+              class="booking-events__tab event"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-3"
+              id="tab-3"
+              tabindex="-1"
+            >
+              Social events
+            </button>
+          </div>
+          <div class="tab-panels booking-events__tab-panels">
+            <div
+              id="panel-1"
+              role="tabpanel"
+              tabindex="0"
+              aria-labelledby="tab-1"
+            >
+              <div class="booking-events__tabcontent">
+                <img
+                  class="booking-events__pattern hide-on-tablet"
+                  width="895"
+                  height="320"
+                  src="/src/assets/patterns/pattern-curve-bottom-right.svg"
+                  alt=""
+                />
+                <div class="booking-events__picture-div">
+                  <picture class="booking-events__picture">
+                    <source
+                      width="1080"
+                      height="1200"
+                      media="(width >= 74.375rem)"
+                      srcset="
+                        /src/assets/homepage/family-gathering-desktop@2x.jpg
+                      "
+                    />
+
+                    <source
+                      width="1146"
+                      height="720"
+                      media="(width >= 48.125rem)"
+                      srcset="
+                        /src/assets/homepage/family-gathering-tablet@2x.jpg
+                      "
+                    />
+
+                    <img
+                      class="has-shadow"
+                      width="652"
+                      height="800"
+                      src="/src/assets/homepage/family-gathering-mobile@2x.jpg"
+                      alt="Smiling people gathered around a wooden table, sharing pasta, salads, bread, fresh vegetables, and drinks"
+                    />
+                  </picture>
+                  <img
+                    class="booking-events__pattern-lines hide-on-tablet"
+                    width="160"
+                    height="76"
+                    src="/src/assets/patterns/pattern-lines.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="booking-events__cta">
+                  <h2 class="booking-events__title">Family Gathering</h2>
+                  <p class="booking-events__description">
+                    We love catering for entire families. So please bring
+                    everyone along for a special meal with your loved ones.
+                    We’ll provide a memorable experience for all.
+                  </p>
+                  <a
+                    href="/booking.html"
+                    class="events__button-link button dark"
+                  >
+                    Book a table
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="tab-panels booking-events__tab-panels">
-              <div
-                id="panel-1"
-                role="tabpanel"
-                tabindex="0"
-                aria-labelledby="tab-1"
-              >
-                <div class="booking-events__tabcontent">
+            <div
+              id="panel-2"
+              role="tabpanel"
+              tabindex="0"
+              aria-labelledby="tab-2"
+              hidden
+            >
+              <div class="booking-events__tabcontent">
+                <img
+                  class="booking-events__pattern hide-on-tablet"
+                  width="895"
+                  height="320"
+                  src="/src/assets/patterns/pattern-curve-bottom-right.svg"
+                  alt=""
+                />
+                <div class="booking-events__picture-div">
+                  <picture class="booking-events__picture">
+                    <source
+                      width="1080"
+                      height="1200"
+                      media="(width >= 74.375rem)"
+                      srcset="
+                        /src/assets/homepage/special-events-desktop@2x.jpg
+                      "
+                    />
+
+                    <source
+                      width="1146"
+                      height="720"
+                      media="(width >= 48.125rem)"
+                      srcset="/src/assets/homepage/special-events-tablet@2x.jpg"
+                    />
+
+                    <img
+                      class="has-shadow"
+                      width="652"
+                      height="800"
+                      src="/src/assets/homepage/special-events-mobile@2x.jpg"
+                      alt="Smiling people gathered around a wooden table, sharing pasta, salads, bread, fresh vegetables, and drinks"
+                    />
+                  </picture>
                   <img
-                    class="booking-events__pattern hide-on-tablet"
-                    width="895"
-                    height="320"
-                    src="/src/assets/patterns/pattern-curve-bottom-right.svg"
+                    class="booking-events__pattern-lines hide-on-tablet"
+                    width="160"
+                    height="76"
+                    src="/src/assets/patterns/pattern-lines.svg"
                     alt=""
                   />
-                  <div class="booking-events__picture-div">
-                    <picture class="booking-events__picture">
-                      <source
-                        width="1080"
-                        height="1200"
-                        media="(width >= 74.375rem)"
-                        srcset="
-                          /src/assets/homepage/family-gathering-desktop@2x.jpg
-                        "
-                      />
-
-                      <source
-                        width="1146"
-                        height="720"
-                        media="(width >= 48.125rem)"
-                        srcset="
-                          /src/assets/homepage/family-gathering-tablet@2x.jpg
-                        "
-                      />
-
-                      <img
-                        class="has-shadow"
-                        width="652"
-                        height="800"
-                        src="/src/assets/homepage/family-gathering-mobile@2x.jpg"
-                        alt="Smiling people gathered around a wooden table, sharing pasta, salads, bread, fresh vegetables, and drinks"
-                      />
-                    </picture>
-                    <img
-                      class="booking-events__pattern-lines hide-on-tablet"
-                      width="160"
-                      height="76"
-                      src="/src/assets/patterns/pattern-lines.svg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="booking-events__cta">
-                    <h2 class="booking-events__title">Family Gathering</h2>
-                    <p class="booking-events__description">
-                      We love catering for entire families. So please bring
-                      everyone along for a special meal with your loved ones.
-                      We’ll provide a memorable experience for all.
-                    </p>
-                    <a
-                      href="/booking.html"
-                      class="events__button-link button dark"
-                    >
-                      Book a table
-                    </a>
-                  </div>
+                </div>
+                <div class="booking-events__cta">
+                  <h2 class="booking-events__title">Special Events</h2>
+                  <p class="booking-events__description">
+                    Whether it’s a romantic dinner or special date you’re
+                    celebrating with others we’ll look after you. We’ll be sure
+                    to mark your special date with an unforgettable meal.
+                  </p>
+                  <a
+                    href="/booking.html"
+                    class="events__button-link button dark"
+                  >
+                    Book a table
+                  </a>
                 </div>
               </div>
-              <div
-                id="panel-2"
-                role="tabpanel"
-                tabindex="0"
-                aria-labelledby="tab-2"
-                hidden
-              >
-                <div class="booking-events__tabcontent">
+            </div>
+            <div
+              id="panel-3"
+              role="tabpanel"
+              tabindex="0"
+              aria-labelledby="tab-3"
+              hidden
+            >
+              <div class="booking-events__tabcontent">
+                <img
+                  class="booking-events__pattern hide-on-tablet"
+                  width="895"
+                  height="320"
+                  src="/src/assets/patterns/pattern-curve-bottom-right.svg"
+                  alt=""
+                />
+                <div class="booking-events__picture-div">
+                  <picture class="booking-events__picture">
+                    <source
+                      width="1080"
+                      height="1200"
+                      media="(width >= 74.375rem)"
+                      srcset="/src/assets/homepage/social-events-desktop@2x.jpg"
+                    />
+
+                    <source
+                      width="1146"
+                      height="720"
+                      media="(width >= 48.125rem)"
+                      srcset="/src/assets/homepage/social-events-tablet@2x.jpg"
+                    />
+
+                    <img
+                      class="has-shadow"
+                      width="652"
+                      height="800"
+                      src="/src/assets/homepage/social-events-mobile@2x.jpg"
+                      alt="Smiling people gathered around a wooden table, sharing pasta, salads, bread, fresh vegetables, and drinks"
+                    />
+                  </picture>
                   <img
-                    class="booking-events__pattern hide-on-tablet"
-                    width="895"
-                    height="320"
-                    src="/src/assets/patterns/pattern-curve-bottom-right.svg"
+                    class="booking-events__pattern-lines hide-on-tablet"
+                    width="160"
+                    height="76"
+                    src="/src/assets/patterns/pattern-lines.svg"
                     alt=""
                   />
-                  <div class="booking-events__picture-div">
-                    <picture class="booking-events__picture">
-                      <source
-                        width="1080"
-                        height="1200"
-                        media="(width >= 74.375rem)"
-                        srcset="
-                          /src/assets/homepage/special-events-desktop@2x.jpg
-                        "
-                      />
-
-                      <source
-                        width="1146"
-                        height="720"
-                        media="(width >= 48.125rem)"
-                        srcset="
-                          /src/assets/homepage/special-events-tablet@2x.jpg
-                        "
-                      />
-
-                      <img
-                        class="has-shadow"
-                        width="652"
-                        height="800"
-                        src="/src/assets/homepage/special-events-mobile@2x.jpg"
-                        alt="Smiling people gathered around a wooden table, sharing pasta, salads, bread, fresh vegetables, and drinks"
-                      />
-                    </picture>
-                    <img
-                      class="booking-events__pattern-lines hide-on-tablet"
-                      width="160"
-                      height="76"
-                      src="/src/assets/patterns/pattern-lines.svg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="booking-events__cta">
-                    <h2 class="booking-events__title">Special Events</h2>
-                    <p class="booking-events__description">
-                      Whether it’s a romantic dinner or special date you’re
-                      celebrating with others we’ll look after you. We’ll be
-                      sure to mark your special date with an unforgettable meal.
-                    </p>
-                    <a
-                      href="/booking.html"
-                      class="events__button-link button dark"
-                    >
-                      Book a table
-                    </a>
-                  </div>
                 </div>
-              </div>
-              <div
-                id="panel-3"
-                role="tabpanel"
-                tabindex="0"
-                aria-labelledby="tab-3"
-                hidden
-              >
-                <div class="booking-events__tabcontent">
-                  <img
-                    class="booking-events__pattern hide-on-tablet"
-                    width="895"
-                    height="320"
-                    src="/src/assets/patterns/pattern-curve-bottom-right.svg"
-                    alt=""
-                  />
-                  <div class="booking-events__picture-div">
-                    <picture class="booking-events__picture">
-                      <source
-                        width="1080"
-                        height="1200"
-                        media="(width >= 74.375rem)"
-                        srcset="
-                          /src/assets/homepage/social-events-desktop@2x.jpg
-                        "
-                      />
-
-                      <source
-                        width="1146"
-                        height="720"
-                        media="(width >= 48.125rem)"
-                        srcset="
-                          /src/assets/homepage/social-events-tablet@2x.jpg
-                        "
-                      />
-
-                      <img
-                        class="has-shadow"
-                        width="652"
-                        height="800"
-                        src="/src/assets/homepage/social-events-mobile@2x.jpg"
-                        alt="Smiling people gathered around a wooden table, sharing pasta, salads, bread, fresh vegetables, and drinks"
-                      />
-                    </picture>
-                    <img
-                      class="booking-events__pattern-lines hide-on-tablet"
-                      width="160"
-                      height="76"
-                      src="/src/assets/patterns/pattern-lines.svg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="booking-events__cta">
-                    <h2 class="booking-events__title">Social Events</h2>
-                    <p class="booking-events__description">
-                      Are you looking to have a larger social event? No problem!
-                      We’re more than happy to cater for big parties. We’ll work
-                      with you to make your event a hit with everyone.
-                    </p>
-                    <a
-                      href="/booking.html"
-                      class="events__button-link button dark"
-                    >
-                      Book a table
-                    </a>
-                  </div>
+                <div class="booking-events__cta">
+                  <h2 class="booking-events__title">Social Events</h2>
+                  <p class="booking-events__description">
+                    Are you looking to have a larger social event? No problem!
+                    We’re more than happy to cater for big parties. We’ll work
+                    with you to make your event a hit with everyone.
+                  </p>
+                  <a
+                    href="/booking.html"
+                    class="events__button-link button dark"
+                  >
+                    Book a table
+                  </a>
                 </div>
               </div>
             </div>

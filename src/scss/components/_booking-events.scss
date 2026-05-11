@@ -6,17 +6,13 @@
   padding-block-start: 5rem;
   padding-block-end: 6rem;
 
+  justify-content: center;
   @include u.bp(lap) {
     padding-block: 7.5rem;
   }
 
   @include u.bp(desk) {
     padding-block: 9rem;
-  }
-
-  &__wrapper {
-    display: grid;
-    justify-content: center;
   }
 
   &__tabs {
