@@ -73,12 +73,3 @@ tabs.forEach((tab) => {
 // Tabs fix
 
 // Form counter code
-const page = document.body.dataset.page;
-
-if (page === 'home') {
-  console.log('Home page JS');
-}
-
-if (page === 'booking') {
-  console.log('Booking page JS');
-}

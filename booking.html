@@ -69,9 +69,27 @@
           alt=""
         />
 
-        <form action="" class="reservation__form form has-shadow">
+        <form
+          class="reservation__form form has-shadow"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          autocomplete="on"
+        >
           <div class="form__field">
             <label for="name" class="visually-hidden">Name</label>
+
+            <input
+              type="hidden"
+              name="access_key"
+              value="fc3d6516-dae1-48ea-b2d0-ab053f9219e8"
+            />
+
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://your-site.com/success.html"
+            />
+
             <input
               class="form__input"
               type="text"
@@ -145,7 +163,7 @@
           <button type="submit" class="button dark dk-form submit-btn">
             Make reservation
           </button>
-          <p id="form-status" class="form__status visually-hidden"></p>
+          <p id="form-status" class="form__status"></p>
         </form>
       </section>
     </main>
